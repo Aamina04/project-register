@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}Project Register{% endblock %}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-inner">
+        <div class="brand">
+            <span class="brand-mark">◍</span>
+            <div>
+                <h1>The Project Register</h1>
+                <p class="brand-sub">Client &amp; research work, kept in order</p>
+            </div>
+        </div>
+        <a href="{{ url_for('add_project') }}" class="btn btn-primary">+ New Entry</a>
+    </div>
+</header>
+
+<main class="page">
+    {% block content %}{% endblock %}
+</main>
+
+<footer class="site-footer">
+    <p>Register maintained by hand &amp; by Flask · MySQL-backed · est. 2026</p>
+</footer>
+
+</body>
+</html>
